@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mini Feed — Styled</title>
+  <link href="./dist/output.css" rel="stylesheet" />
+</head>
+<body class="min-h-screen bg-gradient-to-br from-[#0f172a] via-[#0b1220] to-[#05060a] text-white font-sans p-6 flex items-start justify-center">
+  <div id="app" class="w-full max-w-2xl space-y-6">
+
+    <!-- Top bar -->
+    <header class="flex items-center justify-between mb-2">
+      <h1 class="text-2xl font-extrabold tracking-tight">MiniFeed</h1>
+      <div class="flex items-center gap-3">
+        <button id="newPostBtn" class="px-3 py-1 rounded-lg bg-gradient-to-r from-primary to-secondary shadow-glow hover:brightness-105 transition">New</button>
+        <img src="https://i.pravatar.cc/40" class="w-9 h-9 rounded-full border-2 border-white/10" />
+      </div>
+    </header>
+
+    <!-- Stories -->
+    <div id="stories" class="flex gap-3 overflow-x-auto pb-2">
+      <!-- JS will populate story circles -->
+    </div>
+
+    <!-- Feed -->
+    <main id="feed" class="space-y-5">
+      <!-- Posts get injected by app.js -->
+    </main>
+
+    <!-- Loader for infinite-scroll -->
+    <div id="loader" class="text-center py-6 text-white/60 hidden">Loading more…</div>
+  </div>
+
+  <script src="./src/app.js"></script>
+</body>
+</html>
